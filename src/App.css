@@ -1,38 +1,381 @@
-.App {
+nav{
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 8vh;
+  padding:0% 2% 0% 2%;
+}
+.navBar{
+  position:fixed;
+  width:100%;
+  overflow: scroll;
+}
+ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+}
+nav ul li{
+  list-style: none;
+}
+.Home{
+  background-image:url("expense.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50vh;
+}
+nav a{
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+footer{
+  background-color: black;
+  color: whitesmoke;
   text-align: center;
+  padding: 2%;
+  position: sticky;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Form{
+  background-image:url("expense.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding:250px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Form form,.add-income form{
+  width: 400px;
+  margin-left:250px;
+  margin-right:200px;
+  background-color:whitesmoke;
+  border-radius:30px;
+  padding-left:45px;
+  padding-right:45px;
+  padding-bottom:45px;
+  padding-top:30px;
+  box-shadow:2px 2px gray;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Form input,.Form select,.add-income input,.add-income select{
+   margin-left:55px;
+   padding-right:150px;
+   padding-left:15px;
+   margin-top:10px;
+   border-radius:20px;
+   border:1.5px solid black;
+   padding-top:10px;
+   padding-bottom:10px;
+}
+.Form select,.add-income select{
+  padding-right:228px;
+}
+.Form label,.add-income label{
+  margin-left:55px;
+  font-weight:400px;
+}
+h1{
+  text-align: center;
+  color:green;
+  font-weight:bolder;
+  text-transform:uppercase;
+  margin-bottom:30px;
+}
+.Form button,.add-income button{
+  padding:10px;
+  border-radius:20px;
+  margin-left:150px;
+  background-color:green;
+  color:white;
+  font-weight:bold;
+  padding-left:20px;
+  padding-right:20px;
+  border:2px solid green;
+  margin-top:20px;
+  cursor:pointer;
+}
+.Form button:hover,.add-income button:hover{
+  background-color:white;
+  color:green;
+  border:2px solid green;
+}
+.main-dash{
+  display:flex;
+}
+.sideBar{
+  background-color:whitesmoke;
+  width:80%;
+  color:black;
+  display:flex;
+  flex-direction:column;
+  font-weight: bolder;
+  height: 100vh;
+  position:static;
+  box-shadow: 2px 2px rgba(0,0,0, 0.2);
+  overflow: scroll;
+}
+.sideBar h3{
+  margin-top: 70px;
+  margin-left: 20px;
+  font-size: x-large;
+  text-emphasis: 200px;
+  color: black;
+  text-transform: uppercase;
+}
+.sideBar ul{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-start;
+}
+.sideBar ul li {
+  font-size: larger;
+  list-style: none;
+}
+.box{
+  cursor: pointer;
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+}
+.dash{
+  color: green;
+  cursor: pointer;
+  padding-right: 200px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+}
+.dash a{
+  color: green;
+  text-decoration: none;
+}
+.box a{
+  color: black;
+  text-decoration: none;
+}
+.box a:hover{
+  color: green;
+  
+}
+
+.sub-dash{
+  margin-top:4%;
+  width:100vw;
+  height:720px;
+  overflow:scroll;
+}
+.sub-dash h2{
+  text-transform:uppercase;
+}
+.dash-box{
+  display: flex;
+  margin-top: 10px;
+}
+.expense-box{
+  background-color: red;
   color: white;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 30px;
+  text-align: center;
+  padding-bottom: 30px;
+  cursor: pointer;
+  margin-right: 25px;
+  border-radius: 20px;
+}
+.income-box{
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 30px;
+  margin-right: 25px;
+  padding-bottom: 30px;
+  text-align: center;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.latest-income{
+  flex: display;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.latest-income table{
+  margin-left: 20px;
+  border:2px solid black;
+  border-collapse: collapse;
+  background-color: whitesmoke;
+  box-shadow: 2px 2px rgba(0,0,0, 0.2);
+}
+.latest-income th,td{
+  padding: 10px 120px;
+  border: 2px solid black;
+}
+.latest-income h3{
+  padding-bottom: 5px;
+  border-bottom: 3px solid green;
+  width: 13%;
+}
+.latest-income a{
+  margin-left: 80%;
+  color: blue;
+  cursor: pointer;
+  text-decoration: none;
+}
+.profile{
+  margin-top: 50px;
+  background-color: whitesmoke;
+  padding: 30px;
+  box-shadow: 2px 2px rgba(0,0,0, 0.2);
+  width: 60%;
+  margin-left: 120px;
+  align-items: center;
+  border-radius: 20px;
+}
+.profile .link-profile a{
+  margin-left: 560px;
+  background-color:blue;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 20px;
+}
+.label{
+  margin-left: 30%;
+  font-size: large;
+}
+.label h4{
+  color: green;
+  font-weight: bolder;
+}
+.label label{
+  color: black;
+}
+.password{
+  margin-top: 20px;
+}
+.password a{
+  margin-left: 9%;
+  color: blue;
+  text-decoration: none;
+  font-size: large;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.edit{
+  margin-top: 40px;
+}
+.income-table{
+   padding: 20px;
+}
+.income-table table{
+  border:2px solid black;
+  border-collapse: collapse;
+  background-color: whitesmoke;
+  box-shadow: 2px 2px rgba(0,0,0, 0.2);
+}
+.income-table th,td{
+  padding: 10px 80px;
+  border: 2px solid black;
+}
+.btn-income .link{
+  color: blue;
+  background-color: transparent;
+  border: none;
+  font-size: large;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.btn-income a{
+  color: red;
+  background-color: transparent;
+  border: none;
+  font-size: large;
+  cursor: pointer;
+}
+.add{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.add .link-add{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: green;
+  font-size:xx-large;
+  cursor: pointer;
+}
+.add-income{
+  margin-top: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.filter-form form{
+  padding: 30px;
+  margin-left: 20px;
 }
+.filter-form input,.filter-form select{
+  padding: 2px;
+  margin-right: 60px;
+}
+.filter-form label{
+  font-size: large;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.dialog-box{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content{
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  width: 400px;
+  max-width: 100%;
+  box-shadow: 0 0 10px rgba(0,0,0, 0.3);
+  text-align: center;
+}
+.content p{
+  margin-bottom: 20px;
+}
+.content-button{
+  display: flex;
+  justify-content: center;
+}
+.cancel-button{
+  background-color:red;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-right: 40px;
+}
+.delete-button{
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px ;
+  cursor: pointer;
+}
+.close-button{
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  margin-left: 380px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
